@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us OMS Beverage Limited.</title>
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="border-b border-b-gray-500 py-3 bg-white">
+      <div class="container flex justify-between mx-auto items-center">
+        <div>
+          <!-- <img src="logo" alt="" /> -->
+          [Add Logo Here]
+        </div>
+        <ul class="flex gap-x-5 items-center">
+          <li><a href="./index.html" class="py-1.5 px-2 hover:font-bold rounded-md block">Home</a></li>
+          <li><a href="./about.html" class="py-1.5 px-2 hover:font-bold rounded-md block">About Us</a></li>
+          <li><a href="#" class="font-bold py-1.5 px-2 hover:font-bold rounded-md block">Contact Us</a></li>
+        </ul>
+        <div>
+          <button class="button">Explore</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto">
+      <section>
+        <div class="py-10 grid-cols-1 max-lg:space-y-10 lg:grid-cols-2 grid gap-x-10">
+          <div class="col-span-1 border border-gray-600 rounded-tl-[200px] p-20 flex items-center">
+            <div>
+              <div class="mb-4 space-y-2">
+                <h1 class="title">Contact Us</h1>
+                <p>We'd love to hear from you! Reach out to the OMS Beverages team today and let us know how we can assist you</p>
+              </div>
+              <div class="mt-7 space-y-10">
+                <div>
+                  <h2 class="font-medium">Our Address</h2>
+                  <p>33b Alfred rewane ikoyi Lagos.</p>
+                </div>
+                <div>
+                  <h2 class="font-medium">Our Email</h2>
+                  <p>Robbysejebor@omsbevrage.com</p>
+                </div>
+                <div>
+                  <h2 class="font-medium">Call us</h2>
+                  <p>+234 890 20473</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 rounded-tr-[200px] overflow-hidden">
+            <iframe
+              class="w-full h-full min-h-[600px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.8378576244795!2d3.4254514334452377!3d6.450354132020264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4cfc4fa14b9%3A0xc3d6ea1a1a3990a8!2sMagnumflo%20Place%2C%2033b%20Alfred%20Rewane%20Rd%2C%20Ikoyi%2C%20Lagos%20106104%2C%20Lagos!5e0!3m2!1sen!2sng!4v1714319774223!5m2!1sen!2sng"
+              style="border: 0"
+              allowfullscreen="false"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="max-w-[600px] mx-auto border border-gray-600 p-10 rounded-md">
+          <h1 class="text-xl font-medium text-center">You can also leave us a message</h1>
+          <div class="space-y-10">
+            <div>
+              <label for="subject" class="py-2 block">Subject</label>
+              <input type="text" id="subject" class="w-full py-3 px-2 border rounded-md" name="subject" />
+            </div>
+            <div>
+              <label for="body" class="py-2 block">Message</label>
+              <textarea name="body" id="body" rows="10" class="w-full py-3 px-2 border rounded-md"></textarea>
+            </div>
+            <a id="mailer" href="mailto:Robbysejebor@omsbevrage.com?subject=''&body=''" class="button mx-auto block w-fit" type="submit"
+              >Leave a Message</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const mailto = function (e) {
+        document
+          .getElementById("mailer")
+          .setAttribute(
+            "href",
+            `mailto:Robbysejebor@omsbevrage.com?subject='${document.getElementById("subject").value.trim()}'&body='${document
+              .getElementById("body")
+              .value.trim()}'"`
+          );
+      };
+      document.getElementById("subject").addEventListener("keyup", mailto);
+      document.getElementById("body").addEventListener("keyup", mailto);
+    </script>
+    <footer class="py-20 border border-tr-[30%] bg-black text-white">
+      <div class="container mx-auto">
+        <div class="py-5">[Add Logo Here]</div>
+        <hr class="text-white" />
+
+        <div class="flex justify-between px-4">
+          <div class="gap-x-2 flex">
+            <a href="/index.html" class="block underline underline-offset-2">Home</a>
+            <a href="/about.html" class="block underline underline-offset-2">About</a>
+            <a href="/contact.html" class="block underline underline-offset-2">Contact</a>
+          </div>
+          <div>&copy; 2024 OMS Beverages. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
