@@ -11,19 +11,57 @@
     <nav class="border-b border-b-gray-500 py-3 bg-white">
       <div class="container flex justify-between mx-auto items-center">
         <div>
-          <!-- <img src="logo" alt="" /> -->
-          [Add Logo Here]
+          <img src="./assets/oms-logo.png" class="h-[50px] block" alt="" />
         </div>
-        <ul class="flex gap-x-5 items-center">
+        <ul class="sm:flex gap-x-5 items-center hidden">
           <li><a href="./index.html" class="py-1.5 px-2 hover:font-bold rounded-md block">Home</a></li>
-          <li><a href="./about.html" class="py-1.5 px-2 hover:font-bold rounded-md block">About Us</a></li>
+          <li><a href="./about.html" class="font-bold py-1.5 px-2 hover:font-bold rounded-md block">About Us</a></li>
           <li><a href="#" class="font-bold py-1.5 px-2 hover:font-bold rounded-md block">Contact Us</a></li>
         </ul>
         <div>
-          <button class="button">Explore</button>
+          <button class="max-lg:hidden button">Explore</button>
+          <button class="sm:hidden p-2" id="burger">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H17M1 7H17M1 13H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
       </div>
     </nav>
+    <div
+      id="sideMenu"
+      class="fixed w-full h-full top-0 translate-x-full transition-transform duration-200 ease-out left-0 bg-[#1D2607] text-white z-[999]"
+    >
+      <button id="closeMenu" class="ms-auto block w-fit p-4 text-xl">
+        <svg class="w-5" viewBox="0 0 22 22" version="1.1">
+          <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-869.000000, -159.000000)" fill="white" fill-rule="nonzero">
+              <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                <path
+                  d="M820.716328,39.2890737 L830,48.573 L839.283672,39.2890737 C839.644156,38.9285898 840.211387,38.9008602 840.603678,39.2058851 L840.710926,39.3021143 C841.101451,39.6926386 841.101451,40.3258036 840.710926,40.7163279 L831.427,50 L840.710926,59.2836721 C841.07141,59.6441561 841.09914,60.2113872 840.794115,60.6036784 L840.697886,60.7109263 C840.307361,61.1014506 839.674196,61.1014506 839.283672,60.7109263 L830,51.427 L820.716328,60.7109263 C820.355844,61.0714102 819.788613,61.0991398 819.396322,60.7941149 L819.289074,60.6978857 C818.898549,60.3073614 818.898549,59.6741964 819.289074,59.2836721 L828.573,50 L819.289074,40.7163279 C818.92859,40.3558439 818.90086,39.7886128 819.205885,39.3963216 L819.302114,39.2890737 C819.692639,38.8985494 820.325804,38.8985494 820.716328,39.2890737 Z M819.996181,40.0092211 L829.987233,50 L819.996181,59.9907789 L820.009221,60.0038195 L830,50.0127671 L839.990779,60.0038195 L840.003819,59.9907789 L830.012767,50 L840.003819,40.0092211 L839.990779,39.9961805 L830,49.9872329 L820.009221,39.9961805 L819.996181,40.0092211 Z"
+                  id="cancel"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <ul class="text-white">
+        <li><a href="./index.html" class="p-3 hover:font-bold block border-b-2 border-b-white">Home</a></li>
+        <li><a href="./about.html" class="p-3 hover:font-bold block border-b-2 border-b-white">About Us</a></li>
+        <li><a href="#" class="font-bold p-3 hover:font-bold block border-b-2 border-b-white">Contact Us</a></li>
+      </ul>
+    </div>
+    <script>
+      // #1D2607
+      const burger = document.getElementById("burger");
+      burger.addEventListener("click", function (e) {
+        document.getElementById("sideMenu").classList.remove("translate-x-full");
+      });
+      document.getElementById("closeMenu").addEventListener("click", function () {
+        document.getElementById("sideMenu").classList.add("translate-x-full");
+      });
+    </script>
 
     <main class="container mx-auto">
       <section>

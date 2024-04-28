@@ -10,7 +10,7 @@
     @apply text-3xl;
   }
   section {
-    @apply py-10 sm:px-5 md:px-10 lg:px-20;
+    @apply py-10 px-2 sm:px-5 md:px-10 lg:px-20;
   }
   .card {
     @apply bg-white rounded-lg p-5;
