@@ -8,10 +8,10 @@
     @apply px-7 py-3 bg-primary text-white rounded-lg;
   }
   .title {
-    @apply text-2xl font-semibold mb-3;
+    @apply text-2xl font-semibold mb-3 md:text-4xl md:mb-5;
   }
   .section {
-    @apply px-10;
+    @apply px-10 lg:max-w-[1024px] mx-auto;
   }
   @font-face {
     font-family: "Segoe UI";
@@ -20,6 +20,6 @@
     src: local("Segoe UI Bold"), url("./public/assets/Segoe UI.woff") format("woff");
   }
   p {
-    @apply leading-7 text-sm;
+    @apply leading-7 text-sm md:text-base md:leading-8;
   }
 }

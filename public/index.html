@@ -6,19 +6,19 @@
     <title>OMS Beverages</title>
     <link rel="stylesheet" href="./assets/main.css" />
   </head>
-  <body class="font-body">
+  <body class="font-body relative">
     <div>
       <nav class="flex container mx-auto py-7 items-center justify-between px-5">
         <div>
           <img src="./assets/home/oms-logo.png" class="w-[80px]" alt="" srcset="" />
         </div>
-        <!-- <div class="flex gap-x-5">
-          <a href="" class="hover:font-medium"> Home</a>
-          <a href="" class="hover:font-medium"> About us</a>
-          <a href="" class="hover:font-medium"> Contact us</a>
+        <div class="flex gap-x-5 max-md:hidden">
+          <a href="./home.html" class="font-bold hover:font-medium"> Home</a>
+          <a href="./about.html" class="hover:font-medium"> About us</a>
+          <a href="./contact.html" class="hover:font-medium"> Contact us</a>
         </div>
-        <a href="" class="button block">Explore</a> -->
-        <div>
+        <a href="" class="button block max-md:hidden">Explore</a>
+        <div id="burger" class="cursor-pointer md:hidden">
           <svg class="w-7" viewBox="0 0 18 14" fill="none">
             <path d="M1 1H17M1 7H17M1 13H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -26,17 +26,52 @@
       </nav>
     </div>
 
+    <div
+      id="sideMenu"
+      class="fixed w-full h-full top-0 translate-x-full transition-transform duration-200 ease-out left-0 bg-[#1D2607] text-white z-[999]"
+    >
+      <button id="closeMenu" class="ms-auto block w-fit p-4 text-xl">
+        <svg class="w-5" viewBox="0 0 22 22" version="1.1">
+          <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-869.000000, -159.000000)" fill="white" fill-rule="nonzero">
+              <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                <path
+                  d="M820.716328,39.2890737 L830,48.573 L839.283672,39.2890737 C839.644156,38.9285898 840.211387,38.9008602 840.603678,39.2058851 L840.710926,39.3021143 C841.101451,39.6926386 841.101451,40.3258036 840.710926,40.7163279 L831.427,50 L840.710926,59.2836721 C841.07141,59.6441561 841.09914,60.2113872 840.794115,60.6036784 L840.697886,60.7109263 C840.307361,61.1014506 839.674196,61.1014506 839.283672,60.7109263 L830,51.427 L820.716328,60.7109263 C820.355844,61.0714102 819.788613,61.0991398 819.396322,60.7941149 L819.289074,60.6978857 C818.898549,60.3073614 818.898549,59.6741964 819.289074,59.2836721 L828.573,50 L819.289074,40.7163279 C818.92859,40.3558439 818.90086,39.7886128 819.205885,39.3963216 L819.302114,39.2890737 C819.692639,38.8985494 820.325804,38.8985494 820.716328,39.2890737 Z M819.996181,40.0092211 L829.987233,50 L819.996181,59.9907789 L820.009221,60.0038195 L830,50.0127671 L839.990779,60.0038195 L840.003819,59.9907789 L830.012767,50 L840.003819,40.0092211 L839.990779,39.9961805 L830,49.9872329 L820.009221,39.9961805 L819.996181,40.0092211 Z"
+                  id="cancel"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+      <ul class="text-white">
+        <li><a href="./home.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Home</a></li>
+        <li><a href="./about.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">About Us</a></li>
+        <li><a href="./contact.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Contact Us</a></li>
+      </ul>
+    </div>
+    <script>
+      // #1D2607
+      const burger = document.getElementById("burger");
+      burger.addEventListener("click", function (e) {
+        document.getElementById("sideMenu").classList.remove("translate-x-full");
+      });
+      document.getElementById("closeMenu").addEventListener("click", function () {
+        document.getElementById("sideMenu").classList.add("translate-x-full");
+      });
+    </script>
+
     <div class="relative h-[600px] flex items-end py-5">
       <div class="absolute bg-[#0A0B0DEB]/90 top-0 left-0 w-full h-full"></div>
-      <img src="./assets/home/truck.jpg" class="w-full mx-auto block" alt="" srcset="" />
-      <div class="absolute text-white top-1/2 -translate-y-1/2 left-0 section space-y-5">
-        <h1 class="text-4xl/10 font-title">
+      <img src="./assets/home/truck.jpg" class="w-full mx-auto block max-w-[1280px]" alt="" srcset="" />
+      <div class="absolute text-white top-1/2 -translate-y-1/2 left-0 section space-y-5 max-w-[700px]">
+        <h1 class="text-4xl/10 md:text-5xl font-title">
           <span class="block text-3xl">Crafting</span>
           <span class="block text-primary"> Refreshment,</span>
           <span class="block">Every Sip a Story</span>
         </h1>
 
-        <p class="text-base">
+        <p class="text-base md:text-lg">
           Explore our world of taste and creativity, where every drink is carefully crafted with the best ingredients and the newest automated
           technologies
         </p>
@@ -45,7 +80,7 @@
     </div>
 
     <section class="bg-white py-20 space-y-10">
-      <div class="container px-10 text-black text-center">
+      <div class="container mx-auto px-10 text-black text-center">
         <h1 class="title">About Us</h1>
         <p>
           OMS Beverages is conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria, encompassing capacities for
@@ -53,20 +88,26 @@
           conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria, encompassing capacities for end-to-end
           processing and packaging of beverages from varied forms of water to juice drinks and ready-to-drink-tea (RTD).
         </p>
+        <a href="#" class="button block mx-auto w-fit my-3 md:my-7">Read more</a>
       </div>
       <div class="h-[400px]">
-        <img src="./assets/factory.png" class="h-full object-cover object-center-bottom" alt="" srcset="" />
+        <img src="./assets/factory.png" class="h-full md:container mx-auto md:rounded-[40px] object-cover object-center-bottom" alt="" srcset="" />
       </div>
     </section>
 
-    <section class="py-10 bg-[#FFF5EE]">
-      <div class="section">
-        <div>
-          <img src="./assets/home/vision.png" class="w-full" alt="" srcset="" />
+    <section class="py-10 md:py-20 bg-[#FFF5EE] md:rounded-tl-[200px]">
+      <div class="section grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-10 md:items-center">
+        <div class="col-span-1">
+          <img
+            src="./assets/home/vision.png"
+            class="w-full max-md:max-w-[500px] md:max-h-[386px] md:max-w-[465px] object-cover object-center md:rounded-[40px] mx-auto"
+            alt=""
+            srcset=""
+          />
         </div>
-        <div class="text-center py-5">
+        <div class="text-center md:text-left md:pe-20 py-5 col-span-1">
           <h1 class="title">Our Vision</h1>
-          <p class="text-sm">
+          <p>
             The vision of the company is to enrich the lives of the people of Nigeria and its environs through the provision of accessible safe
             drinking water and nutritional fruit drinks; while also delivering healthy returns on investments to the investors
           </p>
@@ -77,13 +118,13 @@
     <section class="py-20">
       <div class="section">
         <h1 class="title text-center">Why Choose Our Products</h1>
-        <p>
+        <p class="max-w-[500px] mx-auto text-center">
           OMS Beverages specializes in processing and packaging a wide range of beverages, including water, juice drinks, and ready-to-drink tea
           (RTD).
         </p>
 
-        <div class="py-5 grid-cols-1 grid gap-y-8 text-white">
-          <div class="col-span-1 rounded-[40px] bg-ash p-10">
+        <div class="py-5 grid grid-cols-1 lg:grid-cols-3 lg:gap-x-10 gap-y-8 text-white">
+          <div class="col-span-1 max-w-[500px] mx-auto rounded-[40px] bg-ash p-10">
             <svg class="w-[70px] mb-3" viewBox="0 0 70 70" fill="none">
               <circle cx="30" cy="30" r="30" fill="#FE8101" />
               <path
@@ -112,7 +153,7 @@
               <p class="leading-5">We offer a variety of refreshing beverages to quench your thirst and satisfy your taste buds.</p>
             </div>
           </div>
-          <div class="col-span-1 rounded-[40px] bg-ash p-10">
+          <div class="col-span-1 max-w-[500px] mx-auto rounded-[40px] bg-ash p-10">
             <svg class="w-[70px] mb-3" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="30" fill="#FE8101" />
               <path
@@ -125,7 +166,7 @@
               <p class="leading-5">Our commitment to quality sets us apart from the competition.</p>
             </div>
           </div>
-          <div class="col-span-1 rounded-[40px] bg-ash p-10">
+          <div class="col-span-1 max-w-[500px] mx-auto rounded-[40px] bg-ash p-10">
             <svg class="w-[70px] mb-3" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="30" fill="#FE8101" />
               <path
@@ -143,18 +184,18 @@
     </section>
 
     <section>
-      <div class="section pb-5 text-black">
+      <div class="section pb-5 text-black mx-0 max-w-[500px]">
         <h1 class="title">Our Products</h1>
         <p>Our state-of-the-art automated plant ensures the highest quality and consistency in every product.</p>
       </div>
 
       <div class="bg-black py-20 rounded-tr-[100px] section">
-        <div class="grid grid-cols-1 gap-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:bg-white gap-y-8">
           <div class="col-span-1">
-            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0">
-              <img src="./assets/home/water.png" class="w-full" alt="" srcset="" />
+            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0 md:hidden">
+              <img src="./assets/home/water.png" class="w-full max-w-[300px] mx-auto" alt="" srcset="" />
             </div>
-            <div class="bg-white ps-10 py-10 rounded-[8px]">
+            <div class="bg-white md:border border-[#E5E5E5] md:px- ps-10 py-10 rounded-[8px]">
               <div>
                 <h1
                   class="font-medium text-lg before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
@@ -162,7 +203,7 @@
                   <span class="relative text-[24px] me-1">01</span>
                   OMS FLAVOURED WATER
                 </h1>
-                <p>Cleanly refined, high quality water that comes in four flavours:</p>
+                <p class="max-md:leading-5 mb-3">Cleanly refined, high quality water that comes in four flavours:</p>
                 <ul class="text-sm list-disc ps-4">
                   <li>Orange</li>
                   <li>Strawberry</li>
@@ -173,10 +214,10 @@
             </div>
           </div>
           <div class="col-span-1">
-            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0">
-              <img src="./assets/home/juice.png" class="w-full" alt="" srcset="" />
+            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0 md:hidden">
+              <img src="./assets/home/juice.png" class="w-full max-w-[300px] mx-auto" alt="" srcset="" />
             </div>
-            <div class="bg-white ps-10 py-10 rounded-[8px]">
+            <div class="bg-white md:border border-[#E5E5E5] md:px- ps-10 py-10 rounded-[8px]">
               <div>
                 <h1
                   class="font-medium text-lg before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
@@ -184,7 +225,7 @@
                   <span class="relative text-[24px] me-1">02</span>
                   OMS JUICE DRINKS
                 </h1>
-                <p>Refreshingly refined, top-tier juice that comes in three flavours</p>
+                <p class="max-md:leading-5 mb-3">Refreshingly refined, top-tier juice that comes in three flavours</p>
                 <ul class="text-sm list-disc ps-4">
                   <li>Cranberry</li>
                   <li>Orange</li>
@@ -194,10 +235,10 @@
             </div>
           </div>
           <div class="col-span-1">
-            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0">
-              <img src="./assets/home/tea.png" class="w-full" alt="" srcset="" />
+            <div class="p-10 border border-[#493E3E] rounded-t-[16px] border-b-0 md:hidden">
+              <img src="./assets/home/tea.png" class="w-full max-w-[300px] mx-auto" alt="" srcset="" />
             </div>
-            <div class="bg-white ps-10 py-10 rounded-[8px]">
+            <div class="bg-white md:border border-[#E5E5E5] md:px- ps-10 py-10 rounded-[8px]">
               <div>
                 <h1
                   class="font-medium text-lg before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
@@ -205,7 +246,7 @@
                   <span class="relative text-[24px] me-1">03</span>
                   OMS RTD TEA
                 </h1>
-                <p>Nutritiously curated, rejuvenating ready-to-drink tea that comes in three flavours:</p>
+                <p class="max-md:leading-5 mb-3">Nutritiously curated, rejuvenating ready-to-drink tea that comes in three flavours:</p>
                 <ul class="text-sm list-disc ps-4">
                   <li>Iced Lemon Tea</li>
                   <li>Green Tea with Mint</li>
