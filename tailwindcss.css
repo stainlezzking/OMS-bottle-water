@@ -1,12 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   .button {
-    @apply px-3.py-2.bg-primary.text-white;
+    @apply px-7 py-3 bg-primary text-white rounded-lg;
   }
   .title {
-    @apply text-2xl;
+    @apply text-2xl font-semibold mb-3;
+  }
+  .section {
+    @apply px-10;
+  }
+  @font-face {
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Segoe UI Bold"), url("./public/assets/Segoe UI.woff") format("woff");
+  }
+  p {
+    @apply leading-7 text-sm;
   }
 }

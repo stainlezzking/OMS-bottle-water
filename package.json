@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./tailwindcss.css -o ./assets/main.css --watch"
+    "dev": "npx tailwindcss -i ./tailwindcss.css -o ./public/assets/main.css --watch"
   },
   "keywords": [],
   "author": "",
