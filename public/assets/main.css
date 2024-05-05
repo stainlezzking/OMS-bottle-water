@@ -720,6 +720,11 @@ p{
   margin-right: auto;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -728,11 +733,6 @@ p{
 .my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .mb-20{
@@ -753,14 +753,6 @@ p{
 
 .ms-auto{
   margin-inline-start: auto;
-}
-
-.mt-10{
-  margin-top: 2.5rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
 }
 
 .block{
@@ -941,6 +933,18 @@ p{
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
+.space-y-20 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1055,6 +1059,11 @@ p{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#030F1E\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 15 30 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/home\/orange\.png\'\)\]{
   background-image: url('./home/orange.png');
 }
@@ -1156,6 +1165,16 @@ p{
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-32{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.py-40{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .pb-10{
@@ -1420,6 +1439,10 @@ html{
   .max-md\:gap-y-14{
     row-gap: 3.5rem;
   }
+
+  .max-md\:gap-y-20{
+    row-gap: 5rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -1478,6 +1501,12 @@ html{
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
   }
 
+  .md\:space-y-1 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  }
+
   .md\:rounded-\[20px\]{
     border-radius: 20px;
   }
@@ -1516,6 +1545,11 @@ html{
     padding-bottom: 5rem;
   }
 
+  .md\:py-32{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .md\:pe-20{
     padding-inline-end: 5rem;
   }
@@ -1527,6 +1561,11 @@ html{
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:text-lg{
@@ -1593,12 +1632,12 @@ html{
     border-radius: 30px;
   }
 
-  .lg\:rounded-tr-\[150px\]{
-    border-top-right-radius: 150px;
-  }
-
   .lg\:rounded-tl-\[200px\]{
     border-top-left-radius: 200px;
+  }
+
+  .lg\:rounded-tr-\[150px\]{
+    border-top-right-radius: 150px;
   }
 
   .lg\:rounded-tr-\[200px\]{
@@ -1618,9 +1657,9 @@ html{
     padding: 2.5rem;
   }
 
-  .lg\:py-20{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:py-32{
@@ -1631,16 +1670,6 @@ html{
   .lg\:py-40{
     padding-top: 10rem;
     padding-bottom: 10rem;
-  }
-
-  .lg\:px-14{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .lg\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .lg\:pt-32{
