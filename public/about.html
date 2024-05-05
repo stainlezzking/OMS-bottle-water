@@ -1,195 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | the OMS Beverages</title>
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About the OMS Beverages</title>
-  <link rel="stylesheet" href="./assets/main.css" />
-  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-</head>
+  <body class="font-body relative">
+    <div>
+      <nav class="flex container mx-auto py-7 items-center justify-between px-5">
+        <div>
+          <img src="./assets/home/oms-logo.png" class="w-[80px]" alt="" srcset="" />
+        </div>
+        <div class="flex gap-x-5 max-md:hidden">
+          <a href="./index.html" class="hover:font-medium"> Home</a>
+          <a href="./about.html" class="font-bold hover:font-medium"> About us</a>
+          <a href="./contact.html" class="hover:font-medium"> Contact us</a>
+        </div>
+        <a href="./index.html#products" class="button block max-md:hidden">Explore</a>
+        <div id="burger" class="cursor-pointer md:hidden">
+          <svg class="w-7" viewBox="0 0 18 14" fill="none">
+            <path d="M1 1H17M1 7H17M1 13H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </nav>
+    </div>
 
-<body class="font-body relative">
-  <div>
-    <nav class="flex container mx-auto py-7 items-center justify-between px-5">
-      <div>
-        <img src="./assets/home/oms-logo.png" class="w-[80px]" alt="" srcset="" />
-      </div>
-      <div class="flex gap-x-5 max-md:hidden">
-        <a href="./index.html" class="hover:font-medium"> Home</a>
-        <a href="./about.html" class="font-bold hover:font-medium"> About us</a>
-        <a href="./contact.html" class="hover:font-medium"> Contact us</a>
-      </div>
-      <a href="./index.html#products" class="button block max-md:hidden">Explore</a>
-      <div id="burger" class="cursor-pointer md:hidden">
-        <svg class="w-7" viewBox="0 0 18 14" fill="none">
-          <path d="M1 1H17M1 7H17M1 13H17" stroke="black" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </div>
-    </nav>
-  </div>
-
-  <div id="sideMenu"
-    class="fixed w-full h-full top-0 translate-x-full transition-transform duration-200 ease-out left-0 bg-[#1D2607] text-white z-[999]">
-    <button id="closeMenu" class="ms-auto block w-fit p-4 text-xl">
-      <svg class="w-5" viewBox="0 0 22 22" version="1.1">
-        <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-869.000000, -159.000000)"
-            fill="white" fill-rule="nonzero">
-            <g id="square-filled" transform="translate(50.000000, 120.000000)">
-              <path
-                d="M820.716328,39.2890737 L830,48.573 L839.283672,39.2890737 C839.644156,38.9285898 840.211387,38.9008602 840.603678,39.2058851 L840.710926,39.3021143 C841.101451,39.6926386 841.101451,40.3258036 840.710926,40.7163279 L831.427,50 L840.710926,59.2836721 C841.07141,59.6441561 841.09914,60.2113872 840.794115,60.6036784 L840.697886,60.7109263 C840.307361,61.1014506 839.674196,61.1014506 839.283672,60.7109263 L830,51.427 L820.716328,60.7109263 C820.355844,61.0714102 819.788613,61.0991398 819.396322,60.7941149 L819.289074,60.6978857 C818.898549,60.3073614 818.898549,59.6741964 819.289074,59.2836721 L828.573,50 L819.289074,40.7163279 C818.92859,40.3558439 818.90086,39.7886128 819.205885,39.3963216 L819.302114,39.2890737 C819.692639,38.8985494 820.325804,38.8985494 820.716328,39.2890737 Z M819.996181,40.0092211 L829.987233,50 L819.996181,59.9907789 L820.009221,60.0038195 L830,50.0127671 L839.990779,60.0038195 L840.003819,59.9907789 L830.012767,50 L840.003819,40.0092211 L839.990779,39.9961805 L830,49.9872329 L820.009221,39.9961805 L819.996181,40.0092211 Z"
-                id="cancel"></path>
+    <div
+      id="sideMenu"
+      class="fixed w-full h-full top-0 translate-x-full transition-transform duration-200 ease-out left-0 bg-[#1D2607] text-white z-[999]"
+    >
+      <button id="closeMenu" class="ms-auto block w-fit p-4 text-xl">
+        <svg class="w-5" viewBox="0 0 22 22" version="1.1">
+          <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-869.000000, -159.000000)" fill="white" fill-rule="nonzero">
+              <g id="square-filled" transform="translate(50.000000, 120.000000)">
+                <path
+                  d="M820.716328,39.2890737 L830,48.573 L839.283672,39.2890737 C839.644156,38.9285898 840.211387,38.9008602 840.603678,39.2058851 L840.710926,39.3021143 C841.101451,39.6926386 841.101451,40.3258036 840.710926,40.7163279 L831.427,50 L840.710926,59.2836721 C841.07141,59.6441561 841.09914,60.2113872 840.794115,60.6036784 L840.697886,60.7109263 C840.307361,61.1014506 839.674196,61.1014506 839.283672,60.7109263 L830,51.427 L820.716328,60.7109263 C820.355844,61.0714102 819.788613,61.0991398 819.396322,60.7941149 L819.289074,60.6978857 C818.898549,60.3073614 818.898549,59.6741964 819.289074,59.2836721 L828.573,50 L819.289074,40.7163279 C818.92859,40.3558439 818.90086,39.7886128 819.205885,39.3963216 L819.302114,39.2890737 C819.692639,38.8985494 820.325804,38.8985494 820.716328,39.2890737 Z M819.996181,40.0092211 L829.987233,50 L819.996181,59.9907789 L820.009221,60.0038195 L830,50.0127671 L839.990779,60.0038195 L840.003819,59.9907789 L830.012767,50 L840.003819,40.0092211 L839.990779,39.9961805 L830,49.9872329 L820.009221,39.9961805 L819.996181,40.0092211 Z"
+                  id="cancel"
+                ></path>
+              </g>
             </g>
           </g>
-        </g>
-      </svg>
-    </button>
-    <ul class="text-white">
-      <li><a href="./index.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Home</a></li>
-      <li><a href="./about.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">About Us</a></li>
-      <li><a href="./contact.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Contact Us</a></li>
-    </ul>
-  </div>
-  <script>
-    // #1D2607
-    const burger = document.getElementById("burger");
-    burger.addEventListener("click", function (e) {
-      document.getElementById("sideMenu").classList.remove("translate-x-full");
-    });
-    document.getElementById("closeMenu").addEventListener("click", function () {
-      document.getElementById("sideMenu").classList.add("translate-x-full");
-    });
-  </script>
-
-<div class="big-space">
-  <div class="bg-black py-14 rounded-tr-[50px] md:rounded-tr-[80px]">
-    <div class="text-center text-white">
-      <h1 class="text-4xl"> About Us</h1>
+        </svg>
+      </button>
+      <ul class="text-white">
+        <li><a href="./index.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Home</a></li>
+        <li><a href="./about.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">About Us</a></li>
+        <li><a href="./contact.html" class="p-3 font-bold border-b-2 border-b-[#E5E5E580] block">Contact Us</a></li>
+      </ul>
     </div>
-  </div>
-</div>
+    <script>
+      // #1D2607
+      const burger = document.getElementById("burger");
+      burger.addEventListener("click", function (e) {
+        document.getElementById("sideMenu").classList.remove("translate-x-full");
+      });
+      document.getElementById("closeMenu").addEventListener("click", function () {
+        document.getElementById("sideMenu").classList.add("translate-x-full");
+      });
+    </script>
 
-  <div class="space-y-14 pb-20">
-    <section class="section">
-      <div class="md:max-w-[700px] mx-auto md:space-y-10 md:py-10">
-        <h1 class="py-10 text-center leading-8 md:leading-10">
-          OMS Beverages is conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria,
-          encompassing capacities for end-to-end processing and packaging of beverages from varied forms of water to juice
-          drinks and ready-to-drink-tea (RTD). The OMS beverage plant will produce nutritious consumer products for both
-          domestic and regional customers simultaneously thereby reducing import dependency and boosting FX earnings for
-          the
-          Nation.
-        </h1>
-        <div class="space-y-7 lg:space-y-12 px-2 mx-auto md:w-[60%] md:mx-auto text-xl">
-          <div
-            class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]">
-            <span class="me-2 relative">01</span>
-            Still and Flavored water
+    <div class="big-space">
+      <div class="bg-black py-14 rounded-tr-[50px] md:rounded-tr-[80px]">
+        <div class="text-center text-white">
+          <h1 class="text-4xl">About Us</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-14 pb-20">
+      <section class="section">
+        <div class="md:max-w-[700px] mx-auto md:space-y-10 md:py-10">
+          <h1 class="py-10 text-center leading-8 md:leading-10">
+            OMS Beverages is conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria, encompassing capacities for
+            end-to-end processing and packaging of beverages from varied forms of water to juice drinks and ready-to-drink-tea (RTD). The OMS beverage
+            plant will produce nutritious consumer products for both domestic and regional customers simultaneously thereby reducing import dependency
+            and boosting FX earnings for the Nation.
+          </h1>
+          <div class="space-y-7 lg:space-y-12 px-2 mx-auto md:w-[60%] md:mx-auto text-xl">
+            <div
+              data-aos="fade-up"
+              class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
+            >
+              <span class="me-2 relative">01</span>
+              Still and Flavored water
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="350"
+              class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
+            >
+              <span class="me-2 relative">02</span>
+              Fruit juices
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="700"
+              class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]"
+            >
+              <span class="me-2 relative">03</span>
+              Ready to drink Tea &amp; Energy drinks
+            </div>
           </div>
-          <div
-            class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]">
-            <span class="me-2 relative">02</span>
-            Fruit juices
+        </div>
+      </section>
+      <div class="h-[400px] big-space">
+        <img src="./assets/factory.png" class="h-full md:container mx-auto md:rounded-[20px] object-cover object-center-bottom" alt="" srcset="" />
+      </div>
+    </div>
+
+    <div class="big-space">
+      <section class="py-10 md:py-20 bg-[#FFF5EE] md:bg-[#F1F0F080] md:rounded-tl-[100px]">
+        <div class="section grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-10 md:items-center">
+          <div class="col-span-1" data-aos="fade-up">
+            <img src="./assets/home/vision.png" class="w-full max-md:max-w-[500px] mx-auto rounded-[30px]" alt="" srcset="" />
           </div>
-          <div
-            class="font-medium before:block before:p-3 before:absolute relative before:-top-[15px] before:-left-[25px] before:w-[40px] before:h-[40px] before:bg-[#F9A163] before:rounded-[4px]">
-            <span class="me-2 relative">03</span>
-            Ready to drink Tea &amp; Energy drinks
+          <div class="text-center md:text-left md:pe-20 py-5 col-span-1" data-aos="fade-in" data-aos-delay="600">
+            <h1 class="title">Our Vision</h1>
+            <p class="md:leading-9">
+              The vision of the company is to enrich the lives of the people of Nigeria and its environs through the provision of accessible safe
+              drinking water and nutritional fruit drinks; while also delivering healthy returns on investments to the investors
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div class="section py-20 space-y-10 lg:py-32">
+        <h1 class="text-center title">From Our Founder's Desk</h1>
+        <div class="max-w-[600px] mx-auto">
+          <svg class="w-14 mx-auto" viewBox="0 0 83 80" fill="none" data-aos="fade-down-right" data-aos-delay="300">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M38.75 11.875C23.5625 21.625 16.1875 31.6875 16.1875 48.5C17.1875 48.1875 18.0625 48.1875 18.9375 48.1875C26.875 48.1875 34.5625 53.5625 34.5625 63.25C34.5625 73.3125 28.125 79.5625 18.9375 79.5625C7.0625 79.5625 0.25 70.0625 0.25 53C0.25 29.25 11.1875 12.1875 31.625 0.375L38.75 11.875ZM82.5 11.875C67.3125 21.625 59.9375 31.6875 59.9375 48.5C60.9375 48.1875 61.8125 48.1875 62.6875 48.1875C70.625 48.1875 78.3125 53.5625 78.3125 63.25C78.3125 73.3125 71.875 79.5625 62.6875 79.5625C50.875 79.5625 44.0625 70.0625 44.0625 53C44.0625 29.25 55 12.1875 75.4375 0.375L82.5625 11.875H82.5Z"
+              fill="black"
+            ></path>
+          </svg>
+          <p class="px-[30px] py-10 md:text-lg font-medium md:leading-10" data-aos="flip-down" data-aos-delay="1000">
+            OMS Beverages is conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria, encompassing capacities for
+            end-to-end processing and packaging of beverages from varied forms of water to juice drinks and ready-to-drink-tea (RTD)
+          </p>
+          <svg class="w-14 mx-auto" viewBox="0 0 83 80" fill="none" data-aos="fade-down-left" data-aos-delay="400">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M44.25 68.125C59.4375 58.375 66.8125 48.3125 66.8125 31.5C65.8125 31.8125 64.9375 31.8125 64.0625 31.8125C56.125 31.8125 48.4375 26.4375 48.4375 16.75C48.4375 6.6875 54.875 0.4375 64.0625 0.4375C75.9375 0.4375 82.75 9.9375 82.75 27C82.75 50.75 71.8125 67.8125 51.375 79.625L44.25 68.125ZM0.5 68.125C15.6875 58.375 23.0625 48.3125 23.0625 31.5C22.0625 31.8125 21.1875 31.8125 20.3125 31.8125C12.375 31.8125 4.6875 26.4375 4.6875 16.75C4.6875 6.6875 11.125 0.4375 20.3125 0.4375C32.125 0.4375 38.9375 9.9375 38.9375 27C38.9375 50.75 28 67.8125 7.5625 79.625L0.4375 68.125H0.5Z"
+              fill="black"
+            ></path>
+          </svg>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 max-md:gap-y-14 items-center">
+          <div class="cols-span-1 max-w-[400px] mx-auto relative" data-aos="fade-up">
+            <img src="https://omsbevrage.com/assets/oml-founder.png" class="w-full object-cover" alt="" srcset="" />
+            <div class="absolute bg-[#FE8101] text-white -bottom-10 left-0 p-5 text-center w-full rounded-tr-[50px] rounded-[8px] py-8">
+              <h1 class="text-2xl font-medium">DAFE SEJEBOR</h1>
+              <p>Founder</p>
+            </div>
+          </div>
+          <div class="cols-span-1 max-w-[400px] mx-auto relative desktop-delay" data-aos="fade-up" data-aos-delay="500">
+            <img src="https://omsbevrage.com/assets/oml-operations-manager.png" class="w-full object-cover" alt="" srcset="" />
+            <div class="absolute bg-[#FE8101] text-white -bottom-10 left-0 p-5 text-center w-full rounded-tl-[50px] rounded-[8px] py-8">
+              <h1 class="text-2xl font-medium">OGHENEKARO SEJEBOR</h1>
+              <p>Operations Manager</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="h-[400px] big-space">
-      <img src="./assets/factory.png"
-        class="h-full md:container mx-auto md:rounded-[20px] object-cover object-center-bottom" alt="" srcset="" />
-    </div>
-  </div>
 
-  <div class="big-space">
-    <section class="py-10 md:py-20 bg-[#FFF5EE] md:bg-[#F1F0F080] md:rounded-tl-[100px]">
-      <div class="section grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-10 md:items-center">
-        <div class="col-span-1">
-          <img src="./assets/home/vision.png"
-          class="w-full max-md:max-w-[500px] mx-auto rounded-[30px]"
-          alt="" srcset="" />
+    <section
+      class="bg-ash mb-20 text-white max-lg:mb-20 py-14 lg:py-40 bg-no-repeat bg-[url('./home/orange.png')] lg:bg-[url('./home/lg-orange.png')] bg-right-bottom"
+    >
+      <div class="section space-y-14 max-w-[800px]">
+        <div class="text-center mx-auto text-xl leading-9" data-aos="fade-up" data-aos-duration="800">
+          Experience the captivating tastes of our expertly prepared drinks. Every sip is an adventure in taste and quality, from the clear crispness
+          of our water to the freshness of our juices and the calming refreshment of our ready-to-drink teas. Give us a call now to start your taste
+          journey.
         </div>
-        <div class="text-center md:text-left md:pe-20 py-5 col-span-1">
-          <h1 class="title">Our Vision</h1>
-          <p class="md:leading-9">
-          The vision of the company is to enrich the lives of the people of Nigeria and its environs through the
-          provision of accessible safe
-          drinking water and nutritional fruit drinks; while also delivering healthy returns on investments to the
-          investors
-        </p>
+        <a href="./contact.html" class="button mx-auto block w-fit" data-aos="flip-right" data-aos-duration="500" data-aos-delay="200">Contact Us</a>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
 
-  <section>
-    <div class="section py-20 space-y-10 lg:py-32">
-      <h1 class="text-center title">From Our Founder's Desk</h1>
-      <div class="max-w-[600px] mx-auto">
-        <svg class="w-14 mx-auto" viewBox="0 0 83 80" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M38.75 11.875C23.5625 21.625 16.1875 31.6875 16.1875 48.5C17.1875 48.1875 18.0625 48.1875 18.9375 48.1875C26.875 48.1875 34.5625 53.5625 34.5625 63.25C34.5625 73.3125 28.125 79.5625 18.9375 79.5625C7.0625 79.5625 0.25 70.0625 0.25 53C0.25 29.25 11.1875 12.1875 31.625 0.375L38.75 11.875ZM82.5 11.875C67.3125 21.625 59.9375 31.6875 59.9375 48.5C60.9375 48.1875 61.8125 48.1875 62.6875 48.1875C70.625 48.1875 78.3125 53.5625 78.3125 63.25C78.3125 73.3125 71.875 79.5625 62.6875 79.5625C50.875 79.5625 44.0625 70.0625 44.0625 53C44.0625 29.25 55 12.1875 75.4375 0.375L82.5625 11.875H82.5Z"
-            fill="black"></path>
-        </svg>
-        <p class="px-[30px] py-10 md:text-lg font-medium md:leading-10">
-          OMS Beverages is conceptualized as an automated beverage manufacturing plant based in Ikorodu, Lagos Nigeria,
-          encompassing capacities for end-to-end processing and packaging of beverages from varied forms of water to
-          juice drinks and ready-to-drink-tea (RTD)
-        </p>
-        <svg class="w-14 mx-auto" viewBox="0 0 83 80" fill="none">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M44.25 68.125C59.4375 58.375 66.8125 48.3125 66.8125 31.5C65.8125 31.8125 64.9375 31.8125 64.0625 31.8125C56.125 31.8125 48.4375 26.4375 48.4375 16.75C48.4375 6.6875 54.875 0.4375 64.0625 0.4375C75.9375 0.4375 82.75 9.9375 82.75 27C82.75 50.75 71.8125 67.8125 51.375 79.625L44.25 68.125ZM0.5 68.125C15.6875 58.375 23.0625 48.3125 23.0625 31.5C22.0625 31.8125 21.1875 31.8125 20.3125 31.8125C12.375 31.8125 4.6875 26.4375 4.6875 16.75C4.6875 6.6875 11.125 0.4375 20.3125 0.4375C32.125 0.4375 38.9375 9.9375 38.9375 27C38.9375 50.75 28 67.8125 7.5625 79.625L0.4375 68.125H0.5Z"
-            fill="black"></path>
-        </svg>
+    <footer class="bg-black text-white py-24 px-10 rounded-tr-[100px] lg:rounded-tr-[150px]">
+      <div class="space-y-5">
+        <img src="./assets/home/oms-logo.png" class="w-[120px]" alt="" srcset="" />
+        <ul class="flex gap-x-5">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="pt-[1px] block bg-[#484141]"></div>
+        <p>&copy; 2024 OMS Beverages. All rights reserved.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-10 max-md:gap-y-14 items-center">
-        <div class="cols-span-1 max-w-[400px] mx-auto relative">
-          <img src="https://omsbevrage.com/assets/oml-founder.png" class="w-full object-cover" alt="" srcset="">
-          <div class="absolute bg-[#FE8101] text-white -bottom-10 left-0 p-5 text-center w-full rounded-tr-[50px] rounded-[8px] py-8">
-            <h1 class="text-2xl font-medium">DAFE SEJEBOR</h1>
-            <p>Founder</p>
-          </div>
-        </div>
-        <div class="cols-span-1 max-w-[400px] mx-auto relative">
-          <img src="https://omsbevrage.com/assets/oml-operations-manager.png" class="w-full object-cover" alt="" srcset="">
-          <div class="absolute bg-[#FE8101] text-white -bottom-10 left-0 p-5 text-center w-full rounded-tl-[50px] rounded-[8px] py-8">
-            <h1 class="text-2xl font-medium">OGHENEKARO SEJEBOR</h1>
-            <p>Operations Manager</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
+  </body>
 
-  <section class="bg-ash mb-20 text-white max-lg:mb-20 py-14 lg:py-40 bg-no-repeat bg-[url('./home/orange.png')] lg:bg-[url('./home/lg-orange.png')] bg-right-bottom">
-    <div class="section space-y-14 max-w-[800px]">
-      <div class="text-center mx-auto text-xl leading-9">
-        Experience the captivating tastes of our expertly prepared drinks. Every sip is an adventure in taste and quality, from the clear crispness of
-        our water to the freshness of our juices and the calming refreshment of our ready-to-drink teas. Give us a call now to start your taste
-        journey.
-      </div>
-      <a href="./contact.html" class="button mx-auto block w-fit">Contact Us</a>
-    </div>
-  </section>
-
-  <footer class="bg-black text-white py-24 px-10 rounded-tr-[100px] lg:rounded-tr-[150px]">
-    <div class="space-y-5">
-      <img src="./assets/home/oms-logo.png" class="w-[120px]" alt="" srcset="" />
-      <ul class="flex gap-x-5">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-      <div class="pt-[1px] block bg-[#484141]"></div>
-      <p>&copy; 2024 OMS Beverages. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500,
+      easing: "ease-out",
+      anchorPlacement: "center-bottom",
+      once: true,
+    });
+    const removeMdelay = function () {
+      const allDeskdelay = document.getElementsByClassName("desktop-delay");
+      for (let i = 0; i < allDeskdelay.length; i++) {
+        allDeskdelay[i].removeAttribute("data-aos-delay");
+      }
+    };
+    const mqList = window.matchMedia("(max-width: 764px)");
+    // If media query matches on load
+    if (mqList.matches) {
+      removeMdelay(); // using Hugo's function
+    }
+  </script>
 </html>
